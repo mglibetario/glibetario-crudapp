@@ -24,22 +24,17 @@ const UserTable = (props) => (
                 >
                 Edit
                 </button>
-              <button
-                onClick={() => props.deleteUser(user.id)}
-                className="button muted-button"
-                >
-                Delete
-              </button>
+          
             </td>
           </tr>
         ))
       ) : (
         <tr>
-          <td colSpan={3}>No users</td>
+          <td colSpan={3}>No Guests...</td>
         </tr>
       )}
     </tbody>
   </table>
 )
 
-export default UserTable
+export default UserTable;

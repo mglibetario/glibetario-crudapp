@@ -1,0 +1,47 @@
+/* Globals 
+html {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+}
+body {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 68px 0px 0px 0px;
+  z-index: 0;
+  box-sizing: border-box;
+  margin: 0;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.8; 
+}
+h2 {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1.6; 
+}
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.4; 
+}
+p {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.2%;
+}
+p.subtext {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 0.8%;
+}
+ul {
+  list-style-type: none;
+}
+*/

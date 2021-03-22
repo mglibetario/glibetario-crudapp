@@ -5,37 +5,39 @@ const EditUserForm = (props) => {
 
   const handleInputChange = (event) => {
     const { name, value } = event.target
-
     setUser({ ...user, [name]: value })
   }
-  
+
   useEffect(() => {
     setUser(props.currentUser)
   }, [props])
+ 
 
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault()
-
+        if (!user.guestname || !user.guestinfo) return
         props.updateUser(user.id, user)
       }}
     >
       <label>Name</label>
       <input
         type="text"
-        name="name"
-        value={user.name}
+        name="guestname"
+        value={user.guestname}
         onChange={handleInputChange}
+        placeholder="Guest Name"
       />
-      <label>Username</label>
+      <label>Contact</label>
       <input
         type="text"
-        name="username"
-        value={user.username}
+        name="guestinfo"
+        value={user.guestinfo}
         onChange={handleInputChange}
+        placeholder="Contact Number"
       />
-      <button>Update user</button>
+      <button>Update Guest</button>
       <button
         onClick={() => props.setEditing(false)}
         className="button muted-button"
@@ -46,4 +48,4 @@ const EditUserForm = (props) => {
   )
 }
 
-export default EditUserForm
+export default EditUserForm;

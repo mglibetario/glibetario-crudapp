@@ -1,7 +1,14 @@
 import React, { useState } from 'react'
 
 const AddUserForm = (props) => {
-  const initialFormState = { id: null, name: '', username: '' }
+  
+  const initialFormState = 
+    { 
+      id: null, 
+      guestname: '', 
+      guestinfo: '' 
+    };
+
   const [user, setUser] = useState(initialFormState)
 
   const handleInputChange = (event) => {
@@ -14,8 +21,7 @@ const AddUserForm = (props) => {
     <form
       onSubmit={(event) => {
         event.preventDefault()
-        if (!user.name || !user.username) return
-
+        if (!user.guestname || !user.guestinfo) return
         props.addUser(user)
         setUser(initialFormState)
       }}
@@ -23,20 +29,22 @@ const AddUserForm = (props) => {
       <label>Name</label>
       <input
         type="text"
-        name="name"
-        value={user.name}
+        name="guestname"
+        value={user.guestname}
         onChange={handleInputChange}
+        placeholder="Guest Name"
       />
-      <label>Username</label>
+      <label>Contact</label>
       <input
         type="text"
-        name="username"
-        value={user.username}
+        name="guestinfo"
+        value={user.guestinfo}
         onChange={handleInputChange}
+        placeholder="Guest Contact Number"
       />
-      <button>Add new user</button>
+      <button>Add Guest</button>
     </form>
   )
 }
 
-export default AddUserForm
+export default AddUserForm;
