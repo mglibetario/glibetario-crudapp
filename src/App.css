@@ -1,13 +1,11 @@
-/* Globals 
 html {
   font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   height: 100%;
 }
 body {
   font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
-  padding: 68px 0px 0px 0px;
+  font-family: 'Roboto', sans-serif;
   z-index: 0;
   box-sizing: border-box;
   margin: 0;
@@ -15,33 +13,135 @@ body {
   top: 0;
   left: 0;
   height: 100%;
+  width: 100%;
 }
 h1 {
-  font-size: 36px;
+  font-size: 24px;
   font-weight: bold;
   line-height: 1.8; 
+  font-family: 'Berkshire Swash', cursive;
+  color: #B49857;
+  margin-bottom: 0px;
 }
 h2 {
-  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
   font-weight: normal;
   line-height: 1.6; 
 }
 h3 {
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1.4; 
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.4;
+  text-shadow: 2px 2px 2px #A9A9A9;
+  
 }
 p {
-  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
   font-weight: normal;
   line-height: 1.2%;
 }
 p.subtext {
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 0.8%;
 }
 ul {
+  font-family: 'Roboto', sans-serif;
   list-style-type: none;
 }
-*/
+label
+{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: bolder;
+  margin-bottom: 2%;
+}
+a.navbar-brand {
+  margin-right: 0px;
+  white-space: normal;
+}
+.navbar-brand h1 {
+  margin-bottom: 0px;
+  font-size: 24px;
+}
+span.navbar-text h2 {
+  position: relative;
+  margin-bottom: 0px;
+  font-size: 14px;
+}
+nav.navbar.bg-light {
+  height: 80px;
+ }
+.navbar{
+  border-bottom: 0.25px solid #B49857;
+ } 
+.pageReservation h3, .pageReservationView h3 {
+  font-size: 16px;
+  font-weight:  bolder;
+  margin-bottom: 0px;
+  text-align: center;
+}
+.crudAddFormDivAddButton.form-group, .crudEditFormDivButtons.form-group {
+  text-align: end;
+  margin-bottom: 0px;
+}
+#addButton
+{
+width: 160px;
+height: 40px;
+background: #7D665D;
+border-radius: 3px;
+color: #FFFFFF;
+font-family: 'Roboto', sans-serif;
+font-size: 12px;
+}
+#editButton
+{
+width: 80px;
+height: 40px;
+background: #7D665D;
+border-radius: 3px;
+color: #FFFFFF;
+font-family: 'Roboto', sans-serif;
+font-size: 12px;
+}
+#deleteButton
+{
+width: 80px;
+height: 40px;
+background: #7D665D;
+border-radius: 3px;
+color: #FFFFFF;
+font-family: 'Roboto', sans-serif;
+font-size: 12px;
+}
+#updateButton
+{
+width: 80px;
+height: 40px;
+background: #7D665D;
+border-radius: 3px;
+color: #FFFFFF;
+font-family: 'Roboto', sans-serif;
+font-size: 12px;
+}
+#cancelButton
+{
+width: 80px;
+height: 40px;
+background: #7D665D;
+border-radius: 3px;
+color: #FFFFFF;
+font-family: 'Roboto', sans-serif;
+font-size: 12px;
+}
+table, th, td {
+  padding: 10px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}

@@ -1,59 +1,60 @@
-import React from 'react'
+import React from 'react';
+import { Table, Button } from 'reactstrap';
 
 const ReservationTable = (props) => (
-  <table>
+  <Table responsive hover id="tableReservation" size="sm">
     <thead>
       <tr>
-        <th>Date</th>
-        <th>Name</th>
+        <th>Guest</th>
         <th>Contact</th>
+        <th>Date</th>
         <th>Time</th>
         <th>Pax</th>
         <th>Actions</th>
       </tr>
     </thead>
     <tbody>
-      {props.reservations.length > 0  ? (
-        props.reservations.map((user) => (
-  
-          <>
-          {user.reservedate.map((reservation) => (
-            
-            <tr key={reservation.idreservedate}>
-                <td>{reservation.date}</td>
-                <td>{user.guestname}</td>
-                <td>{user.guestinfo}</td>
-                <td>{reservation.time}</td>
-                <td>{reservation.pax}</td>
+      {props.reservations.length > 0 ? (
+        props.reservations.map((reservation) => (
+          <tr key={reservation.id}>
+            <td>{reservation.guest}</td>
+            <td>{reservation.contact}</td>
+            <td>{reservation.date}</td>
+            <td>{reservation.time}</td>
+            <td>{reservation.pax}</td>
 
-                <td>
-                <button
-                onClick={() => {
-                props.editReservationRow(reservation)
-                }}
-                className="button muted-button"
+            <td>
+                <Button 
+                  id="editButton"
+                  size="sm"
+                  onClick={() => {
+                    props.editReservation(reservation)
+                    }}
                 >
-                Edit
-                </button>
-              <button
-                onClick={() => props.deleteReservation(reservation.idreservedate)}
-                className="button muted-button"
+                  Edit
+                </Button>
+                {' '}
+                <Button 
+                  id="deleteButton"
+                  size="sm"
+                  onClick={() => {
+                    props.deleteReservation(reservation.id)
+                  }}
                 >
-                Delete
-              </button>
-              </td>
-              </tr>
-            ))}
-          </>
+                  Delete
+                </Button>
           
+            </td>
+            
+          </tr>
         ))
       ) : (
         <tr>
-          <td colSpan={3}>No Reservations....</td>
+          <td colSpan={6}>No Reservations...</td>
         </tr>
       )}
     </tbody>
-  </table>
+  </Table>
 )
 
 export default ReservationTable;

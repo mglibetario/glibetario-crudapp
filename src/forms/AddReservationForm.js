@@ -1,59 +1,104 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 
 const AddReservationForm = (props) => {
+  const initialFormState = { id: null, guest: '', contact: '', date: '', time: '', pax: '' };
+  const [reservation, setReservation] = useState(initialFormState)
 
-  const initialReservationFormState =
-    {
-      idreservedate: null, 
-      date: '', 
-      time: '', 
-      pax: '' 
-    };
-    
-  const [reservation, setReservation] = useState(initialReservationFormState)
-
-  const handleInputChangeRes = (event) => {
+  const handleInputChange = (event) => {
     const { name, value } = event.target
-
     setReservation({ ...reservation, [name]: value })
   }
 
+  const currDate = new Date().toISOString().slice(0, 10);
+
   return (
-    <form
+    <Form id="crudAddForm"
       onSubmit={(event) => {
         event.preventDefault()
-        if (!reservation.date || !reservation.time || !reservation.pax) return
+        if ( !reservation.guest || !reservation.contact || !reservation.date || !reservation.time || !reservation.pax ) return;
         props.addReservation(reservation)
-        setReservation(initialReservationFormState)
+        setReservation(initialFormState)
       }}
-    >   
-      <label>Date</label>
-      <input
-        type="text"
-        name='date'
-        value = {reservation.date}
-        onChange={handleInputChangeRes}
-        placeholder="Date of Reservation"
-      />
-      <label>Time</label>
-      <input
-        type="text"
-        name="time"
-        value={reservation.time}
-        onChange={handleInputChangeRes}
-        placeholder="Time of Reservation"
-      />
-      <label>Number of Guests</label>
-      <input
-        type="text"
-        name="pax"
-        value={reservation.pax}
-        onChange={handleInputChangeRes}
-        placeholder="Number of Guests"
-      />
-      <button>Add Reservation</button>
-    </form>
-  )
+    >
+      <FormGroup>
+        <Label for="guest">Guest</Label>
+        <Input
+          type="text"
+          id="guest"
+          name="guest"
+          value={reservation.guest}
+          onChange={handleInputChange}
+          placeholder="Guest Name"
+          maxLength="40"
+          required
+        />
+      </FormGroup>
+      <FormGroup>
+        <Label for="contact">Contact</Label>
+        <Input
+          type="tel"
+          id="contact"
+          name="contact"
+          value={reservation.contact}
+          onChange={handleInputChange}
+          placeholder="Format: 123-456789"
+          maxLength="10"
+          pattern="[[0-9]{3}-[0-9]{6}"
+          required
+        />
+      </FormGroup>
+      <FormGroup>
+        <Label for="date">Date</Label>
+        <Input
+          type="date"
+          id="date"
+          name="date"
+          value={reservation.date}
+          onChange={handleInputChange}
+          placeholder="Reservation Date"
+          min={currDate}
+          required
+        />
+      </FormGroup>
+      <FormGroup>
+        <Label for="time">Time</Label>
+        <Input 
+          type="time"
+          id="time"
+          name="time"
+          onChange={handleInputChange}
+          value={reservation.time}
+          placeholder="Reservation Time"
+          min="08:00"
+          max="20:00"
+          required
+        />
+      </FormGroup>
+      <FormGroup>
+        <Label for="pax">Pax</Label>
+        <Input 
+          type="number"
+          id="pax"
+          name="pax"
+          onChange={handleInputChange}
+          value={reservation.pax}
+          placeholder="Max of 5 Guests"
+          min="1"
+          max="5"
+          maxLength="1"
+          required
+        />
+      </FormGroup>
+
+      <FormGroup className="crudAddFormDivAddButton">
+        <Button id="addButton" size="sm">
+          Add
+        </Button>
+      </FormGroup>
+
+    </Form>
+  );
 }
 
 export default AddReservationForm;

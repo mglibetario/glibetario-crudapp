@@ -1,25 +1,11 @@
 import React from 'react';
-//import CrudApp from './forms/CrudApp';
-import Navigation from './components/Navigation/Navigation';
-import SaladMaker from './components/SaladMaker/SaladMaker';
-import UserContext from './components/User/User';
-
-const user = {
-    name: 'Gab',
-    favorites: [
-      'seasoned rice',
-      'broccoli'
-    ]
-}
+import CrudApp from './forms/CrudApp';
+import './App.css';
 
 const App = () => {
   return (
-    <>
-      <UserContext.Provider value={user}>
-        <Navigation />
-        <SaladMaker />
-      </UserContext.Provider>
-    </>
+    <CrudApp />
   );
 }
+
 export default App;
