@@ -79,6 +79,10 @@ nav.navbar.bg-light {
 .navbar{
   border-bottom: 0.25px solid #B49857;
  } 
+
+.container {
+  padding-bottom: 40px;
+}
 .pageReservation h3, .pageReservationView h3 {
   font-size: 16px;
   font-weight:  bolder;

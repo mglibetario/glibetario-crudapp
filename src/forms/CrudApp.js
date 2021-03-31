@@ -51,7 +51,7 @@ const CrudApp = () => {
       <Container>
       <Row id="reservations">
 
-        <Col xs="12" sm="4">
+        <Col xs={{size: 12, order: 2}} sm={{size: 4, order: 1}}>
           <div className="pageReservation" >
             {editing ? (
                         <div className="pagReservationEdit">
@@ -74,10 +74,10 @@ const CrudApp = () => {
           </div>
         </Col>
         
-        <Col xs="12" sm="8">
+        <Col xs={{size: 12, order: 1}} sm={{size: 8, order: 2}}>
           <div className="pageReservationView"> 
             <br />
-            <h3>VIEW RESERVATION</h3>
+            <h3>VIEW RESERVATIONS</h3>
             <br />
             <ReservationTable 
               reservations={reservations} 
