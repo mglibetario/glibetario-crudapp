@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/glibetario-crudapp/static/css/main.9c07db18.chunk.css",
-    "main.js": "/glibetario-crudapp/static/js/main.08063812.chunk.js",
-    "main.js.map": "/glibetario-crudapp/static/js/main.08063812.chunk.js.map",
+    "main.css": "/glibetario-crudapp/static/css/main.589837d4.chunk.css",
+    "main.js": "/glibetario-crudapp/static/js/main.ddfe5783.chunk.js",
+    "main.js.map": "/glibetario-crudapp/static/js/main.ddfe5783.chunk.js.map",
     "runtime-main.js": "/glibetario-crudapp/static/js/runtime-main.9d3485ab.js",
     "runtime-main.js.map": "/glibetario-crudapp/static/js/runtime-main.9d3485ab.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/glibetario-crudapp/static/css/2.4c97ca4f.chunk.css",
@@ -10,14 +10,14 @@
     "static/js/2.b8ddfd87.chunk.js.map": "/glibetario-crudapp/static/js/2.b8ddfd87.chunk.js.map",
     "index.html": "/glibetario-crudapp/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/glibetario-crudapp/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.9c07db18.chunk.css.map": "/glibetario-crudapp/static/css/main.9c07db18.chunk.css.map",
+    "static/css/main.589837d4.chunk.css.map": "/glibetario-crudapp/static/css/main.589837d4.chunk.css.map",
     "static/js/2.b8ddfd87.chunk.js.LICENSE.txt": "/glibetario-crudapp/static/js/2.b8ddfd87.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9d3485ab.js",
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.b8ddfd87.chunk.js",
-    "static/css/main.9c07db18.chunk.css",
-    "static/js/main.08063812.chunk.js"
+    "static/css/main.589837d4.chunk.css",
+    "static/js/main.ddfe5783.chunk.js"
   ]
 }
