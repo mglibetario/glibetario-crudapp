@@ -42,9 +42,9 @@ const AddReservationForm = (props) => {
           name="contact"
           value={reservation.contact}
           onChange={handleInputChange}
-          placeholder="Format: 123-456789"
+          placeholder="Contact Format: 1234567890"
           maxLength="10"
-          pattern="[[0-9]{3}-[0-9]{6}"
+          pattern="[0-9]{10}"
           required
         />
       </FormGroup>
@@ -56,7 +56,7 @@ const AddReservationForm = (props) => {
           name="date"
           value={reservation.date}
           onChange={handleInputChange}
-          placeholder="Reservation Date"
+          placeholder="Date Format: YYYY-MM-DD"
           min={currDate}
           required
         />
@@ -69,7 +69,7 @@ const AddReservationForm = (props) => {
           name="time"
           onChange={handleInputChange}
           value={reservation.time}
-          placeholder="Reservation Time"
+          placeholder="Time Format: 24-hour clock"
           min="08:00"
           max="20:00"
           required

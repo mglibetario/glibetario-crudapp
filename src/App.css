@@ -91,7 +91,7 @@ nav.navbar.bg-light {
 }
 #addButton
 {
-width: 160px;
+width: 150px;
 height: 40px;
 background: #7D665D;
 border-radius: 3px;
@@ -121,7 +121,7 @@ font-size: 12px;
 }
 #updateButton
 {
-width: 80px;
+width: 75px;
 height: 40px;
 background: #7D665D;
 border-radius: 3px;
@@ -131,7 +131,7 @@ font-size: 12px;
 }
 #cancelButton
 {
-width: 80px;
+width: 75px;
 height: 40px;
 background: #7D665D;
 border-radius: 3px;

@@ -33,7 +33,6 @@ const ReservationTable = (props) => (
                 >
                   Edit
                 </Button>
-                {' '}
                 <Button 
                   id="deleteButton"
                   size="sm"
@@ -50,7 +49,7 @@ const ReservationTable = (props) => (
         ))
       ) : (
         <tr>
-          <td colSpan={6}>No Reservations...</td>
+          <td colSpan={6}><h3>No Reservations...</h3></td>
         </tr>
       )}
     </tbody>
